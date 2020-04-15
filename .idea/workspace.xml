@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ccc208d0-a03c-41c8-95bb-59bf056e847a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aTjeGZgrY6ML5PrUrnW43yEj9o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+  </component>
+  <component name="RunManager" selected="Python.move_data_to_sql">
+    <configuration name="move_data_to_sql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="vnpy_strategies" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/move_data_to_sql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="read_data_from_sql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="vnpy_strategies" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_data_from_sql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.move_data_to_sql" />
+        <item itemvalue="Python.read_data_from_sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccc208d0-a03c-41c8-95bb-59bf056e847a" name="Default Changelist" comment="" />
+      <created>1586766571611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586766571611</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="646" y="357" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586766700775">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="646" y="357" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1586766700775" />
+    <state x="842" y="190" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1586833828553">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="842" y="190" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.864@0.0.1536.864" timestamp="1586833828553" />
+    <state x="825" y="314" width="473" height="486" key="#com.intellij.tools.ToolEditorDialog" timestamp="1586833937253">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="825" y="314" width="473" height="486" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.864@0.0.1536.864" timestamp="1586833937253" />
+    <state x="760" y="191" key="FileChooserDialogImpl" timestamp="1586833895884">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="760" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586833895884" />
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1586856919061">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
+    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1586856919061">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
+    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1586856919061">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1586856919061">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
+    <state x="228" y="233" width="996" height="707" key="SettingsEditor" timestamp="1586833941925">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="228" y="233" width="996" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586833941925" />
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1586936040384">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586936040384" />
+    <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586799093703">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1586799093703" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dual_thrust_strategy.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
