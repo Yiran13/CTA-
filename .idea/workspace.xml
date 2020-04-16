@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc208d0-a03c-41c8-95bb-59bf056e847a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/double_rsi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/DoubleRsi-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRsi.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trend Model 评估.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Trend Model 评估.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/double_rsi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_stationary.py" beforeDir="false" afterPath="$PROJECT_DIR$/market_stationary.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +137,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="228" y="233" width="996" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586833941925" />
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1586936040384">
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587036994922">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586936040384" />
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587036994922" />
     <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586799093703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1586799093703" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587016362995">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587016362995" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -148,6 +157,11 @@
           <url>file://$PROJECT_DIR$/dual_thrust_strategy.py</url>
           <line>97</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/market_stationary.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

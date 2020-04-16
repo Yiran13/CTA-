@@ -15,6 +15,9 @@ class DoubleRsi(CtaTemplate):
     """"""
     author = "yiran"
 
+    s_window = 5
+    l_window = 15
+
     rsi_window = 11
     long_threshold_l_window = 50
     long_threshold_s_window = 80
@@ -34,7 +37,7 @@ class DoubleRsi(CtaTemplate):
     long_entered = False
     short_entered = False
 
-    parameters = ["rsi_window",
+    parameters = ['s_window', 'l_window', "rsi_window",
                   "long_threshold_l_window", "long_threshold_s_window", 'exit_return',
                   'exit_loss', "fixed_size"]
 
@@ -49,10 +52,10 @@ class DoubleRsi(CtaTemplate):
         self.rsi_short_l = 100-self.long_threshold_l_window
         self.rsi_short_s = 100-self.long_threshold_s_window
 
-        self.bg5 = BarGenerator(self.on_bar, 5, self.on_5min_bar)
+        self.bg5 = BarGenerator(self.on_bar, self.s_window, self.on_5min_bar)
         self.am5 = ArrayManager()
 
-        self.bg15 = BarGenerator(self.on_bar, 15, self.on_15min_bar)
+        self.bg15 = BarGenerator(self.on_bar, self.l_window, self.on_15min_bar)
         self.am15 = ArrayManager()
         self.long_order_record = []
         self.short_order_record = []
