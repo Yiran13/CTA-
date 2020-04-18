@@ -1,0 +1,2 @@
+参数,夏普比率
+"{'s_window': 5, 'l_window': 15, 'atr_window': 20, 'atr_multiplier': 0.05, 'exit_return_soft_long': -0.1, 'exit_loss_soft_long': -0.2, 'rsi_window': 11, 'exit_return_soft_short': 0.2, 'exit_loss_soft_short': 0.1, 'long_threshold_l_window': 50, 'long_threshold_s_window': 80, 'exit_return': 0.02, 'exit_loss': 0.02, 'fixed_size': 1}",0.6436841221136033

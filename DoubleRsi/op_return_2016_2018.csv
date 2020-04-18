@@ -1,0 +1,4 @@
+参数,总收益率
+"{'s_window': 5, 'l_window': 15, 'atr_window': 35, 'atr_multiplier': 0.25, 'rsi_window': 11, 'exit_return_soft_short': 0.05, 'exit_loss_soft_short': 0.3, 'long_threshold_l_window': 50, 'long_threshold_s_window': 80, 'exit_return': 0.09, 'exit_loss': 0.01, 'fixed_size': 1}",92.96219160000001
+"{'s_window': 5, 'l_window': 15, 'atr_window': 35, 'atr_multiplier': 0.25, 'rsi_window': 11, 'exit_return_soft_short': 0.05, 'exit_loss_soft_short': 0.3, 'long_threshold_l_window': 50, 'long_threshold_s_window': 80, 'exit_return': 0.07, 'exit_loss': 0.01, 'fixed_size': 1}",92.96219160000001
+"{'s_window': 5, 'l_window': 15, 'atr_window': 35, 'atr_multiplier': 0.25, 'rsi_window': 11, 'exit_return_soft_short': 0.05, 'exit_loss_soft_short': 0.3, 'long_threshold_l_window': 50, 'long_threshold_s_window': 80, 'exit_return': 0.09999999999999999, 'exit_loss': 0.01, 'fixed_size': 1}",92.96219160000001

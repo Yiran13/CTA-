@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc208d0-a03c-41c8-95bb-59bf056e847a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Double Rsi 策略性能提升-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Double Rsi 策略性能提升.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_atr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/op_return_2016_2018.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/op_sharp_2016_2018.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/DoubleRsi-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleRsi.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trend Model 评估.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Trend Model 评估.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/double_rsi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_stationary.py" beforeDir="false" afterPath="$PROJECT_DIR$/market_stationary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRSI评估.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRSI评估.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRsi原始策略表现.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi原始策略表现.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +29,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aTjeGZgrY6ML5PrUrnW43yEj9o" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
@@ -100,6 +106,9 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="646" y="357" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586766700775">
       <screen x="0" y="0" width="1536" height="864" />
@@ -137,10 +146,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="228" y="233" width="996" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586833941925" />
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587036994922">
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587129672662">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587036994922" />
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587129672662" />
     <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586799093703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
