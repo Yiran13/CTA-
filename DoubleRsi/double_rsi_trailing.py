@@ -11,7 +11,7 @@ from vnpy.app.cta_strategy import (
 from datetime import time
 
 
-class DoubleRsi(CtaTemplate):
+class DoubleRsiTrailing(CtaTemplate):
     """"""
     author = "yiran"
 
@@ -122,6 +122,8 @@ class DoubleRsi(CtaTemplate):
 
         if self.start_time <= bar.datetime.time() < self.exit_time:
             if self.pos == 0:
+                self.intra_trade_high = bar.high_price
+                self.intra_trade_low = bar.low_price
                 if self.long_entered:
                     self.buy(bar.close_price + 5, self.fixed_size)
                     self.long_order_record.append(bar.close_price + 5)
@@ -130,16 +132,27 @@ class DoubleRsi(CtaTemplate):
                     self.short_order_record.append(bar.close_price - 5)
             elif self.pos > 0:
                 buy_order_price = self.long_order_record[-1]
-                if bar.close_price >= buy_order_price*(1+self.exit_return):
-                    self.sell(bar.close_price * 0.99, abs(self.pos))
-                elif bar.close_price <= buy_order_price*(1-self.exit_loss):
-                    self.sell(bar.close_price * 0.99, abs(self.pos))
+                self.intra_trade_high = max(
+                    self.intra_trade_high, bar.high_price)
+                self.intra_trade_low = bar.low_price
+                self.sell(self.intra_trade_high * \
+                          (1 - self.trailing_percent / 100), abs(self.pos), True)
+
+                # if bar.close_price >= buy_order_price*(1+self.exit_return):
+                #     self.sell(bar.close_price * 0.99, abs(self.pos))
+                # elif bar.close_price <= buy_order_price*(1-self.exit_loss):
+                #     self.sell(bar.close_price * 0.99, abs(self.pos))
             elif self.pos < 0:
-                sell_order_price = self.short_order_record[-1]
-                if bar.close_price >= sell_order_price*(1+self.exit_loss):
-                    self.cover(bar.close_price * 1.01, abs(self.pos))
-                elif bar.close_price <= sell_order_price*(1-self.exit_return):
-                    self.cover(bar.close_price * 1.01, abs(self.pos))
+                self.intra_trade_high = bar.high_price
+                self.intra_trade_low = min(self.intra_trade_low, bar.low_price)
+                self.cover(self.intra_trade_low * (1 + \
+                           self.trailing_percent / 100), abs(self.pos), True)
+
+                #
+                # if bar.close_price >= sell_order_price*(1+self.exit_loss):
+                #     self.cover(bar.close_price * 1.01, abs(self.pos))
+                # elif bar.close_price <= sell_order_price*(1-self.exit_return):
+                #     self.cover(bar.close_price * 1.01, abs(self.pos))
         elif bar.datetime.time() > self.exit_time:
             if self.pos > 0:
                 self.sell(bar.close_price * 0.99, abs(self.pos))

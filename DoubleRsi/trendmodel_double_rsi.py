@@ -9,9 +9,10 @@ from vnpy.app.cta_strategy import (
     ArrayManager,
 )
 from datetime import time
+import numpy as np
 
 
-class DoubleRsi(CtaTemplate):
+class TrendModelDoubleRsi(CtaTemplate):
     """"""
     author = "yiran"
 
@@ -22,6 +23,29 @@ class DoubleRsi(CtaTemplate):
     long_threshold_l_window = 50
     long_threshold_s_window = 80
     fixed_size = 1
+
+    fast_ma_macd = 9
+    slow_ma_macd = 26
+    signal_macd = 4
+    true_range_window = 4
+    true_range_influence_multiplier = 0.5
+
+    cross_over_record_max_num = 50
+    cross_over_slice_window = 4
+    trail_bar_window = 6
+
+    mdif = 0
+    cross_above_0 = False
+    cross_under_0 = False
+    cross_over_record_array = np.zeros(shape=(4, cross_over_record_max_num))
+    cross_over_slice_window_highest = 0
+    cross_over_slice_window_lowest = 0
+    last_cross_over_interval = 0
+    last_cross_over_side = 0
+
+    bar_num = 0
+    bar_num_after_crossover = 0
+
 
     start_time = time(hour=10)
     exit_time = time(hour=14, minute=55)
@@ -121,7 +145,9 @@ class DoubleRsi(CtaTemplate):
             return
 
         if self.start_time <= bar.datetime.time() < self.exit_time:
-            if self.pos == 0:
+            time_constraint = self.last_cross_over_interval <= self.cross_over_record_max_num
+            if self.pos == 0 and time_constraint:
+
                 if self.long_entered:
                     self.buy(bar.close_price + 5, self.fixed_size)
                     self.long_order_record.append(bar.close_price + 5)
@@ -151,9 +177,59 @@ class DoubleRsi(CtaTemplate):
     def on_15min_bar(self, bar: BarData):
         """"""
         self.am15.update_bar(bar)
+        self.bar_num += 1
         if not self.am15.inited:
             return
         self.rsi_value_l_window = self.am15.rsi(self.rsi_window)
+        am = self.am15
+        self.mdif, signal, hist = am.macd(
+            self.fast_ma_macd, self.slow_ma_macd, self.signal_macd, array=True)
+        self.long_close_stop_order_price = am.low[-self.trail_bar_window:].min()
+        self.short_close_stop_order_price = am.high[-self.trail_bar_window:].max()
+
+        if self.mdif[-2] < 0 < self.mdif[-1]:
+            self.cross_above_0 = True
+        elif self.mdif[-2] > 0 > self.mdif[-1]:
+            self.cross_under_0 = True
+
+        if self.cross_under_0 or self.cross_above_0:
+            # bar_num
+            self.cross_over_record_array[0, :-
+                                         1] = self.cross_over_record_array[0, 1:]
+            # high
+            self.cross_over_record_array[1, :-
+                                         1] = self.cross_over_record_array[1, 1:]
+            # low
+            self.cross_over_record_array[2, :-
+                                         1] = self.cross_over_record_array[2, 1:]
+            # cross_over_side
+            self.cross_over_record_array[3, :-
+                                         1] = self.cross_over_record_array[3, 1:]
+
+            self.cross_over_record_array[0, -1] = self.bar_num
+            self.cross_over_record_array[1, -1] = am.high[-1]
+            self.cross_over_record_array[2, -1] = am.low[-1]
+            if self.cross_above_0:
+                side = 1
+            elif self.cross_under_0:
+                side = -1
+            self.cross_over_record_array[3, -1] = side
+            self.cross_above_0, self.cross_under_0 = False, False
+            self.cross_over_slice_window_highest = np.max(
+                self.cross_over_record_array[1, -self.cross_over_slice_window :])
+            self.cross_over_slice_window_lowest = np.min(
+                self.cross_over_record_array[2, -self.cross_over_slice_window :])
+            self.last_cross_over_interval = self.bar_num - \
+                                            self.cross_over_record_array[0, -1]
+            self.last_cross_over_side = self.cross_over_record_array[3, -1]
+            true_range_influence = np.mean(am.trange(
+                array=True)[-self.true_range_window:]) * self.true_range_influence_multiplier
+            self.long_open_stop_order_price = self.cross_over_slice_window_highest + \
+                                              true_range_influence
+            self.short_open_stop_order_price = self.cross_over_slice_window_lowest + \
+                                               true_range_influence
+
+
 
     def on_order(self, order: OrderData):
         """

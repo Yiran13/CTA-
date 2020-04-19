@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc208d0-a03c-41c8-95bb-59bf056e847a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Double Rsi 策略性能提升-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Double Rsi 策略性能提升.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_atr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleRsi/op_return_2016_2018.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleRsi/op_sharp_2016_2018.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/DollarRsiGenerator-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/backtesting_demo-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/rsidollarrsi-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DollarRsiGenerator.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/Double_trendmodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_trailing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollar_atr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollar_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollar_rsi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleRsi/trendmodel_double_rsi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtesting_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/double_ma_strategy_compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rsidollarrsi.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleRSI评估.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRSI评估.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi_signal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Double Rsi 策略性能提升-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Double Rsi 策略性能提升-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Double Rsi 策略性能提升.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Double Rsi 策略性能提升.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRsi/double_rsi.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi/double_rsi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleRsi/rsi_dollor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi/rsi_dollor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DoubleRsi原始策略表现.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleRsi原始策略表现.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/vnpy" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RunManager" selected="Python.move_data_to_sql">
@@ -122,42 +131,42 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="825" y="314" width="473" height="486" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.864@0.0.1536.864" timestamp="1586833937253" />
-    <state x="760" y="191" key="FileChooserDialogImpl" timestamp="1586833895884">
+    <state x="760" y="191" key="FileChooserDialogImpl" timestamp="1587216098492">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="760" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586833895884" />
-    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1586856919061">
+    <state x="760" y="191" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587216098492" />
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom" timestamp="1587224945610">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
-    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1586856919061">
+    <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587224945610" />
+    <state width="1515" height="220" key="GridCell.Tab.0.center" timestamp="1587224945610">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
-    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1586856919061">
+    <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587224945610" />
+    <state width="1515" height="220" key="GridCell.Tab.0.left" timestamp="1587224945610">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
-    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1586856919061">
+    <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587224945610" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right" timestamp="1587224945610">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586856919061" />
+    <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587224945610" />
     <state x="228" y="233" width="996" height="707" key="SettingsEditor" timestamp="1586833941925">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="228" y="233" width="996" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586833941925" />
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587129672662">
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587260653788">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587129672662" />
+    <state x="449" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587260653788" />
     <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586799093703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="402" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1586799093703" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587016362995">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587261107282">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587016362995" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587261107282" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -171,6 +180,11 @@
           <url>file://$PROJECT_DIR$/market_stationary.py</url>
           <line>139</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trade_by_trade.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,7 +13,7 @@ import numpy as np
 import talib
 
 
-class RsiDollar(CtaTemplate):
+class RsiDollarRsi(CtaTemplate):
     """"""
     author = "yiran"
 
@@ -24,6 +24,7 @@ class RsiDollar(CtaTemplate):
     sma_long_window = 20
     long_trend_cum_threshold = 10
     short_trend_cum_threshold = 10
+    cross_over_day = 10
     bbands_window = 14
     exit_return = 0.04
     exit_loss = 0.02
@@ -35,13 +36,18 @@ class RsiDollar(CtaTemplate):
 
     init_dollar_bar_num = 100
     rsi_value = 0
+    rsi_cum_value = 0
     long_trend_cum = 0
     short_trend_cum = 0
+    long_trend_days = np.inf
+    short_trend_days =np.inf
 
     cum_filtered = False
     dollar_bar_finished = False
     long_trend = False
     short_trend = False
+    rsi_long = False
+    rsi_short = False
 
     # cum_filtered_cci_value = 0
     parameters = ['rsi_window', 'rsi_up_threshold',
@@ -177,20 +183,41 @@ class RsiDollar(CtaTemplate):
                 cum_open_array = np.array(self.cum_open_list)
                 sma_short_window_array = talib.SMA(cum_close_array,self.sma_short_window)
                 sma_long_window_array = talib.SMA(cum_close_array,self.sma_long_window)
+                rsi_window_array = talib.RSI(cum_close_array, self.rsi_window)
                 if sma_long_window_array[-2] > sma_short_window_array [-2] and sma_long_window_array[-1] < sma_short_window_array[-1]:
                     self.long_trend = True
+                    self.long_trend_days = 0
                 if sma_long_window_array[-2] < sma_short_window_array [-2] and sma_long_window_array[-1] > sma_short_window_array[-1]:
                     self.short_trend = True
+                    self.short_trend_days = 0
+
+                if rsi_window_array[-2] < 100-self.rsi_up_threshold < rsi_window_array[-1]:
+                    self.rsi_long = True
+                elif rsi_window_array[-2] > self.rsi_up_threshold > rsi_window_array[-1]:
+                    self.rsi_short = True
+                else:
+                    self.rsi_long = False
+                    self.rsi_short = False
+
+                if self.short_trend_days != np.inf:
+                    self.short_trend_days += 1
+                elif self.long_trend_days != np.inf:
+                    self.long_trend_days += 1
+
+
                 if self.pos == 0:
-                    if self.short_trend:
+
+                    if self.short_trend and self.short_trend_days < self.cross_over_day and self.rsi_short:
                         self.short(bar.close_price - 5, self.fixed_size)
                         self.short_order_record.append(bar.close_price - 5)
 
-                    elif self.long_trend:
+                    elif self.long_trend and self.long_trend_days < self.cross_over_day and self.rsi_long:
                         self.buy(bar.close_price+5, self.fixed_size)
                         self.long_order_record.append(bar.close_price + 5)
 
                 elif self.pos > 0:
+                    self.long_trend = False
+                    self.long_trend_days = np.inf
                     buy_order_price = self.long_order_record[-1]
                     if bar.close_price >= buy_order_price * (1 + self.exit_return):
                         self.sell(bar.close_price * 0.99, abs(self.pos))
@@ -198,6 +225,8 @@ class RsiDollar(CtaTemplate):
                         self.sell(bar.close_price * 0.99, abs(self.pos))
 
                 elif self.pos < 0:
+                    self.short_trend = False
+                    self.short_trend_days = np.inf
                     sell_order_price = self.short_order_record[-1]
                     if bar.close_price >= sell_order_price * (1 + self.exit_loss):
                         self.cover(bar.close_price * 1.01, abs(self.pos))
